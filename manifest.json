@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "Workflowy - RTL converter",
+    "version": "1.0",
+    "description": "Workflowy - RTL converter",
+    "browser_action":{
+        "default_title":"Workflowy - RTL converter",
+        "default_icon": "logo.png"
+    },
+    "icons": {
+        "128": "logo.png"
+      },
+    "content_scripts":[
+        {
+            "matches":["https://workflowy.com/*"],
+            "css":["content.css"],
+            "js": ["jquery-3.1.0.min.js","content.js"]
+        }
+    ],
+    "permissions":["https://workflowy.com/*"]
+}

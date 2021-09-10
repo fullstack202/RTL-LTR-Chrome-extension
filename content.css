@@ -1,0 +1,8 @@
+.is-rtl {
+    direction:rtl;
+    unicode-bidi: embed;
+  }
+  .is-ltr {
+    direction:ltr;
+    unicode-bidi: embed;
+  }
