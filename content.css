@@ -6,7 +6,7 @@
     direction:ltr;
     unicode-bidi: embed;
   }
-  ._1q9c2s1 {
+  ._oqw2mn > div > div > ._1q9c2s1 {
     display: block;
     position: absolute;
     right: -25px;
@@ -16,4 +16,14 @@
     height: 18px;
     border-radius: 9px;
     color: rgb(75, 81, 85);
+}
+._1wbge1a > div > div > ._1q9c2s1 {
+  display: block;
+  position: initial;
+  left: 501px;
+  top: 7px;
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  color: rgb(75, 81, 85);
 }
