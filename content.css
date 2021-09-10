@@ -19,11 +19,14 @@
 }
 ._1wbge1a > div > div > ._1q9c2s1 {
   display: block;
-  position: initial;
-  left: 501px;
+  position: absolute;
+  right: 0px;
   top: 7px;
   width: 18px;
   height: 18px;
   border-radius: 9px;
   color: rgb(75, 81, 85);
+}
+.readjust{
+  right: 20px;
 }
