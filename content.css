@@ -1,6 +1,6 @@
 .is-rtl .project * {
-  direction: rtl;
-  unicode-bidi: embed;
+  direction: rtl !important;
+  unicode-bidi: embed !important;
 }
 
 .is-rtl .project {
@@ -36,7 +36,15 @@
   border-left: none !important;
 }
 
-.is-rtl .menu.itemMenu {
-  right: 0px;
-  left: unset;
+.is-rtl :not(.children) .menu.itemMenu {
+  right: 4px !important;
+  left: unset !important;
+}
+.is-rtl .children .menu.itemMenu {
+  right: -6px !important;
+}
+
+.is-rtl .addSiblingButton {
+  right: -11px !important;
+  left: unset !important;
 }
