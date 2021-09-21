@@ -1,40 +1,42 @@
-body.is-rtl .project * {
+.is-rtl .project * {
   direction: rtl;
   unicode-bidi: embed;
 }
 
-body.is-rtl .project {
+.is-rtl .project {
   text-align: right !important;
 }
 
-body.is-rtl a.expand {
+.is-rtl a.expand {
   transform: scaleX(-1) !important;
-  right: -22px !important;
+  right: 26px !important;
   left: unset !important;
 }
 
-body.is-rtl a.bullet {
-  right: 0px !important;
+.is-rtl a.bullet {
+  right: 48px !important;
   left: unset !important;
 }
 
-body.is-rtl div.children div.name {
+.is-rtl div.children div.name {
+  right: -48px;
   margin-right: 0px !important;
-  padding-right: 24px !important;
+  padding-right: 72px !important;
   margin-left: unset !important;
   padding-left: unset !important;
 }
 
-body.is-rtl div.children div.children {
+.is-rtl div.children div.children {
+  right: -1px;
   margin-right: 10px !important;
-  padding-right: 25px !important;
+  padding-right: 24px !important;
   border-right: 1px solid rgb(236, 238, 240) !important;
   margin-left: unset !important;
   padding-left: unset !important;
   border-left: none !important;
 }
 
-body.is-rtl .menu.itemMenu {
-  right: -55px;
+.is-rtl .menu.itemMenu {
+  right: 0px;
   left: unset;
 }
