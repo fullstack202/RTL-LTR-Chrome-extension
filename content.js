@@ -1,19 +1,23 @@
+const ltrIcon = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxnPg0KCQkJPHJlY3Qgd2lkdGg9IjM4NCIgaGVpZ2h0PSIzMiIvPg0KCQkJPHJlY3QgeT0iOTYiIHdpZHRoPSIzMjAiIGhlaWdodD0iMzIiLz4NCgkJCTxyZWN0IHk9IjE5MiIgd2lkdGg9IjUxMiIgaGVpZ2h0PSIzMiIvPg0KCQkJPHJlY3QgeT0iMzg0IiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjMyIi8+DQoJCQk8cmVjdCB5PSIyODgiIHdpZHRoPSIzMjAiIGhlaWdodD0iMzIiLz4NCgkJCTxyZWN0IHk9IjQ4MCIgd2lkdGg9IjMyMCIgaGVpZ2h0PSIzMiIvPg0KCQkJPHJlY3QgeD0iNDgwIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiLz4NCgkJCTxyZWN0IHg9IjQxNiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg=='
+const rtlIcon = 'data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPGc+DQoJCTxnPg0KCQkJPHJlY3Qgd2lkdGg9IjM4NCIgaGVpZ2h0PSIzMiIvPg0KCQkJPHJlY3QgeD0iMTkyIiB5PSI5NiIgd2lkdGg9IjMyMCIgaGVpZ2h0PSIzMiIvPg0KCQkJPHJlY3QgeT0iMTkyIiB3aWR0aD0iNTEyIiBoZWlnaHQ9IjMyIi8+DQoJCQk8cmVjdCB5PSIzODQiIHdpZHRoPSI1MTIiIGhlaWdodD0iMzIiLz4NCgkJCTxyZWN0IHg9IjE5MiIgeT0iMjg4IiB3aWR0aD0iMzIwIiBoZWlnaHQ9IjMyIi8+DQoJCQk8cmVjdCB4PSIxOTIiIHk9IjQ4MCIgd2lkdGg9IjMyMCIgaGVpZ2h0PSIzMiIvPg0KCQkJPHJlY3QgeD0iNDgwIiB3aWR0aD0iMzIiIGhlaWdodD0iMzIiLz4NCgkJCTxyZWN0IHg9IjQxNiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIi8+DQoJCTwvZz4NCgk8L2c+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8L3N2Zz4NCg=='
+
 function appendButton() {
-  const button = document.createElement('button')
+  const button = document.createElement('input')
+  button.type = 'image'
   button.id = 'btn_toggle_rtl'
-  button.className = 'btn_toggle_rtl _1k2fhcg'
-  button.innerHTML = 'Toggle RTL mode on'
+  button.className = 'btn_toggle_rtl'
+  button.src = ltrIcon
 
   button.addEventListener('click', function() {
     document.getElementsByClassName('pageContainer')[0].classList.toggle('is-rtl')
     const isOn = document.getElementsByClassName('pageContainer')[0].classList.contains('is-rtl')
-    document.getElementById('btn_toggle_rtl').innerHTML = 'Toggle RTL mode ' + (isOn ? 'off' : 'on')
+    document.getElementById('btn_toggle_rtl').src = isOn ? rtlIcon : ltrIcon
   })
-  document.getElementsByClassName('_1sbsllb')[0].appendChild(button)
+  document.getElementsByClassName('_5kaapu')[0].prepend(button)
 }
 
 function exec() {
-  const isready = document.getElementsByClassName('_1sbsllb').length > 0
+  const isready = document.getElementsByClassName('_5kaapu').length > 0
   if (isready) {
     appendButton()
   } else {
