@@ -6,12 +6,12 @@ function appendButton() {
   button.type = 'image'
   button.id = 'btn_toggle_rtl'
   button.className = 'btn_toggle_rtl'
-  button.src = ltrIcon
+  button.src = rtlIcon
 
   button.addEventListener('click', function() {
     document.getElementsByClassName('pageContainer')[0].classList.toggle('is-rtl')
     const isOn = document.getElementsByClassName('pageContainer')[0].classList.contains('is-rtl')
-    document.getElementById('btn_toggle_rtl').src = isOn ? rtlIcon : ltrIcon
+    document.getElementById('btn_toggle_rtl').src = !isOn ? rtlIcon : ltrIcon
   })
   document.getElementsByClassName('_5kaapu')[0].prepend(button)
 }
