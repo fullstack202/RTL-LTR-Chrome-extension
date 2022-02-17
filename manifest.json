@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Workflowy - RTL converter",
-    "version": "1.0",
+    "version": "1.1",
     "description": "Workflowy - RTL converter",
     "browser_action":{
         "default_title":"Workflowy - RTL converter",
@@ -12,10 +12,10 @@
       },
     "content_scripts":[
         {
-            "matches":["https://workflowy.com/*"],
+            "matches":["*://workflowy.com/*"],
             "css":["content.css"],
             "js": ["content.js"]
         }
     ],
-    "permissions":["https://workflowy.com/*"]
+    "permissions":["*://workflowy.com/*"]
 }
